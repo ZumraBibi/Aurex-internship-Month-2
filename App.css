@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc; /* Clean modern off-white background */
+    color: #1e293b;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#root {
+    width: 100%;
+    max-width: 550px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Header Sections Styling */
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+    header h1 {
+        font-size: 2.8rem;
+        color: #4f46e5; /* Beautiful Indigo primary color */
+        margin: 0 0 10px 0;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+    }
+
+    header p {
+        margin: 0;
+        color: #64748b;
+        font-size: 1.1rem;
+    }
+
+/* Input Form Layout */
+form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+    form input {
+        flex: 1;
+        padding: 14px 18px;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        font-size: 16px;
+        outline: none;
+        background-color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        transition: all 0.2s ease;
+    }
+
+        form input:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+        }
+
+/* Buttons Design */
+button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #4f46e5;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+    transition: all 0.2s ease;
+}
+
+    button:hover {
+        background-color: #4338ca;
+        transform: translateY(-1px);
+    }
+
+    button:active {
+        transform: translateY(0);
+    }
+
+/* Mid Heading */
+h2 {
+    font-size: 1.6rem;
+    color: #0f172a;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Empty State Description */
+p {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 1.05rem;
+    margin-top: 15px;
+}
+
+/* Individual Task Cards Layout */
+#root > div > div,
+.task-item {
+    background: #ffffff;
+    padding: 16px 20px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f1f5f9;
+}
+
+    #root > div > div span,
+    .task-item span {
+        flex: 1;
+        font-size: 16px;
+        color: #334155;
+    }
+
+    /* Secondary Actions Buttons inside task list */
+    #root > div > div button,
+    .task-item button {
+        padding: 8px 14px;
+        font-size: 14px;
+        border-radius: 8px;
+        background-color: #f1f5f9;
+        color: #475569;
+        box-shadow: none;
+    }
+
+        #root > div > div button:hover,
+        .task-item button:hover {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            transform: none;
+        }
+
+        /* Delete button target styling */
+        #root > div > div button:last-of-type,
+        .task-item button:last-of-type {
+            background-color: #fef2f2;
+            color: #ef4444;
+        }
+
+            #root > div > div button:last-of-type:hover,
+            .task-item button:last-of-type:hover {
+                background-color: #fee2e2;
+                color: #dc2626;
+            }
